@@ -1,0 +1,420 @@
+body{
+  background-color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+nav {
+  background-color: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: transparent;
+}
+
+.nav-container {
+  background-color: rgb(0, 0, 0);
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  color: #afafaf;
+  position: relative; /* ليكون فوق الفيديو */
+  z-index: 1; /* يظهر فوق الفيديو */
+}
+
+.logo {
+  width: 30%;
+
+}
+
+.logo img {
+  width: 30%;  
+                                     
+} 
+
+.list-nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.list-nav li {
+  margin-left: 20px;
+}
+
+.list-nav a {
+  text-decoration: none; 
+}
+
+.list-nav button {
+ background: none;
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.list-nav button:hover {
+  background-color: #1f7ae2;
+  color: rgb(0, 0, 0);
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    max-width: 500px;
+    padding: 10px;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-left: none;
+    background-color: #333;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #555;
+}
+
+/* قائمة المنتجات */
+/* ✅ عرض قائمة المنتجات */
+.product-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 90px;
+    width: 100%;
+    max-width: 12000px;
+}
+
+/* تصميم كل منتج */
+.product {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    margin: 10px 0;
+}
+
+/* عرض الصور داخل المنتج */
+.product-images {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.product-images img {
+    width: 70%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-images img:hover {
+    transform: scale(1.1);
+}
+
+.product-size-select {
+    margin-top: 20px;
+    background-color:   #000000;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 300px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .product-size-select label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    color: #1db954;
+  }
+
+  .product-size-select select,
+  .product-size-select input {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  .hidden {
+    display: none;
+  }
+/* تفاصيل المنتج */
+.product-details {
+    padding: 20px;
+    text-align: center;
+}
+
+/* اسم المنتج */
+.product-details h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.product-details strong {
+   color: #1db954;
+
+}
+
+/* وصف المنتج */
+.product-details p {
+    font-size: 20px;
+    color: #a19d9d;
+    margin-bottom: 15px;
+    
+}
+
+.size-btn {
+  padding: 4px 8px;
+  font-size: 12px;
+  margin: 3px;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #a0a0a0;
+  border-radius: 10px;
+  color: #000000;
+  background-color:#1f7ae2;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.size-btn:hover {
+  background-color: #ffffff;
+}
+
+
+/* أسعار المنتج */
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.old-price {
+    font-size: 18px;
+    color: #ff625d;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.new-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* زر الشراء */
+.buy-btn {
+    background-color: #0c0c0c;
+    color: 1f7ae2;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: #1f7ae2;
+    transform: scale(1.1);
+}
+
+/* تأثير التحويم على المنتج */
+.product:hover {
+    transform: scale(1.05);
+}
+button {
+    padding: 10px 20px;
+    background-color: #1f7ae2;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    
+}
+
+button:hover {
+    background-color: #1459a8;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer {
+    background-color: black;
+    color: rgb(35, 130, 247);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    position: relative; /* ليظهر فوق الفيديو */
+    z-index: 1; /* يظهر فوق الفيديو */
+    ul {
+        list-style: none;
+      }
+      
+      .example-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .example-2 .icon-content {
+        margin: 0 10px;
+        position: relative;
+      }
+      .example-2 .icon-content .tooltip {
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #000000;
+        padding: 6px 10px;
+        border-radius: 15px;
+        opacity: 0;
+        visibility: hidden;
+        font-size: 14px;
+        transition: all 0.3s ease;
+      }
+      .example-2 .icon-content:hover .tooltip {
+        opacity: 1;
+        visibility: visible;
+        top: -50px;
+      }
+      .example-2 .icon-content a {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 20%;
+        color: #4d4d4d;
+        background-color: #ffff;
+        transition: all 0.3s ease-in-out;
+      }
+      .example-2 .icon-content a:hover {
+        box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 50%);
+      }
+      .example-2 .icon-content a svg {
+        position: relative;
+        z-index: 1;
+        width: 30px;
+        height: 30px;
+      }
+      .example-2 .icon-content a:hover {
+        color: white;
+      }
+      .example-2 .icon-content a .filled {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: #000;
+        transition: all 0.3s ease-in-out;
+      }
+      .example-2 .icon-content a:hover .filled {
+        height: 100%;
+      }
+      .example-2 .icon-content a[data-social="Tiktok"] .filled,
+      .example-2 .icon-content a[data-social="Tiktok"] ~ .tooltip {
+        background-color: #e01010;
+      }
+      .example-2 .icon-content a[data-social="whatsapp"] .filled,
+      .example-2 .icon-content a[data-social="whatsapp"] ~ .tooltip {
+        background-color: #1db954;
+      }
+      .example-2 .icon-content a[data-social="facebook"] .filled,
+      .example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
+        background-color: #0051ff;
+      }
+      .example-2 .icon-content a[data-social="Instagram"] .filled,
+      .example-2 .icon-content a[data-social="Instagram"] ~ .tooltip {
+        background-color: #ea4c89;
+      }
+      .example-2 .icon-content a[data-social="telegram"] .filled,
+      .example-2 .icon-content a[data-social="telegram"] ~ .tooltip {
+        background-color: #0088cc;
+      }
+}
+
+footer p {
+    margin-bottom: 10px;
+    
+}
+
+footer a {
+    color: #1f7ae2;
+    text-decoration: none;
+    
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+button:hover
+{
+    background-color: #1f7ae2;
+    color: rgb(0, 0, 0);
+}

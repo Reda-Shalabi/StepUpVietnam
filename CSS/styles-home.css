@@ -1,5 +1,4 @@
 body {
- 
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -38,12 +37,13 @@ body {
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         
-        .nav-container {
+         .nav-container {
             width: 100%;
-  display: flex; /* أو block حسب التصميم */
-  justify-content: space-between; /* أو أي توزيع مناسب */
-  align-items: center;
-  box-sizing: border-box;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
         }
         #language-selector {
           color: #ffffff;
@@ -65,13 +65,16 @@ body {
   width: 30%;  
                                      
 } 
-
+@media (max-width: 768px) {
 .list-nav ul {
+  flex-direction: column;
+    align-items: flex-start;
   display: flex;
   justify-content: space-evenly;
   padding: 0;
   margin: 0;
   list-style: none;
+}
 }
 
 .list-nav li {
@@ -390,8 +393,10 @@ html {
     max-width: 12000px;
 }
 
-/* تصميم كل منتج */
+@media (max-width: 768px) {
 .product {
+     flex-direction: column;
+    align-items: center;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -400,7 +405,7 @@ html {
     transition: all 0.3s ease;
     margin: 10px 0;
 }
-
+}
 /* عرض الصور داخل المنتج */
 .product-images {
     display: flex;

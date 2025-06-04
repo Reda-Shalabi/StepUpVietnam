@@ -1,3 +1,9 @@
+fetch('products.json')
+    .then(response => response.json())
+    .then(data => {
+        // عرض المنتجات هنا
+    });
+
 function addToCart(productName, productPrice, productImage) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   let product = cart.find(item => item.name === productName);

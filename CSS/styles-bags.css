@@ -117,6 +117,60 @@ nav {
     background-color: #555;
 }
 
+  .product-strip {
+    overflow: hidden;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    height: 150px; /* زودنا الارتفاع ليكون أكبر */
+    position: relative;
+  }
+  
+  .strip-track {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 20s linear infinite;
+  }
+  
+  .strip-track img {
+    width: 100px;  /* زودنا عرض الصور */
+    height: 100px; /* زودنا ارتفاع الصور */
+    object-fit: cover;
+    margin: 0 10px;
+    margin-top: 25px;
+    border-radius: 5px;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+  }
+  .strip-track img:hover {
+    transform: scale(1.5); /* التكبير بمقدار 20% */
+  }
+  
+  .announcement {
+    font-size: 20px; /* زودنا حجم الخط */
+    font-weight: bold;
+    color: #d43f3a;
+    margin: 0 20px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  /* Animation */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+
 /* قائمة المنتجات */
 /* ✅ عرض قائمة المنتجات */
 .product-gallery {

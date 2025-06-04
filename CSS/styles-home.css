@@ -39,12 +39,11 @@ body {
         }
         
         .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
+            width: 100%;
+  display: flex; /* أو block حسب التصميم */
+  justify-content: space-between; /* أو أي توزيع مناسب */
+  align-items: center;
+  box-sizing: border-box;
         }
         #language-selector {
           color: #ffffff;
@@ -271,7 +270,12 @@ html {
   }
   
   
-  
+  img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
   
 
 .background-video {

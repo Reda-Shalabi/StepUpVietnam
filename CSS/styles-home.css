@@ -16,6 +16,18 @@ body{
   --nike-yellow: #ffc439;
 }
 
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
 
  nav {
             background-color: rgb(0, 0, 0);

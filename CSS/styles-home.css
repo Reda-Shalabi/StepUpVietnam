@@ -1,11 +1,11 @@
-body {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 *
@@ -18,26 +18,14 @@ body {
   --nike-yellow: #ffc439;
 }
 
-  .container {
-    flex-direction: column;
-    width: 100%;
-    padding: 10px;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-}
-
  nav {
             background-color: rgb(0, 0, 0);
             padding: 15px 0;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         
-         .nav-container {
-            width: 100%;
+        .nav-container {
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -65,33 +53,15 @@ body {
   width: 70%;  
                                      
 } 
-<<<<<<< HEAD
-/* --- الوضع الطبيعي (ديسكتوب) --- */
+
 .list-nav ul {
   display: flex;
   justify-content: space-evenly;
   padding: 0;
   margin: 0;
   list-style: none;
-=======
-@media (max-width: 768px) {
-  .list-nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 10px;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  .list-nav {
-    width: 100%;
-  }
->>>>>>> c56f0cbbb9ea3f76c857a1a252b112595ab29781
+  
 }
-
 
 .list-nav li {
   margin-left: 20px;
@@ -376,10 +346,12 @@ html {
   /* ====== Responsive (اختياري) ====== */
   @media (max-width: 768px) {
   .slider {
-    max-width: 70vw;
+    max-width: 90vw;
     border-radius: 10px;
     margin: 12px auto 18px auto;
   }
+
+
   .dots {
     bottom: 6px;
   }
@@ -391,12 +363,7 @@ html {
 }
   
   
-  img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
+  
   
 
 .background-video {
@@ -511,10 +478,8 @@ html {
     max-width: 12000px;
 }
 
-@media (max-width: 768px) {
+/* تصميم كل منتج */
 .product {
-     flex-direction: column;
-    align-items: center;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -523,7 +488,7 @@ html {
     transition: all 0.3s ease;
     margin: 10px 0;
 }
-}
+
 /* عرض الصور داخل المنتج */
 .product-images {
     display: flex;

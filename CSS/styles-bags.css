@@ -117,7 +117,7 @@ nav {
     background-color: #555;
 }
 
-<<<<<<< HEAD
+
 .hamburger {
   display: none;
 }
@@ -145,6 +145,7 @@ nav {
   width: 80px;  
                                      
 } 
+}
 @media (max-width: 768px) {
   .close-menu {
     display: block;
@@ -180,10 +181,10 @@ nav {
     z-index: 1199;
     display: none;
   }
+}
   #menu-overlay.active {
     display: block;
-=======
-
+  }
 
 .product-strip {
   overflow: hidden;
@@ -230,12 +231,14 @@ nav {
   }
   100% {
     transform: translateX(-50%);
->>>>>>> c56f0cbbb9ea3f76c857a1a252b112595ab29781
+
   }
+
+
 }
 
 @media (max-width: 768px) {
-<<<<<<< HEAD
+  
   .list-nav ul {
     display: flex;
     flex-direction: column;
@@ -267,7 +270,7 @@ nav {
   }
 
 }
-}
+
 
 .login-button, .cart-button {
   display: inline-flex;
@@ -278,11 +281,11 @@ nav {
   background: none;
   border: none;
   padding: 0 10px;
-=======
+
   .products-grid {
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
->>>>>>> c56f0cbbb9ea3f76c857a1a252b112595ab29781
+
 }
 
 /* قائمة المنتجات */

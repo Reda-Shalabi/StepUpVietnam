@@ -93,6 +93,18 @@ body{
 
 /* --- موبايل: القائمة مخفية وتظهر مع الهامبرجر --- */
 @media (max-width: 768px) {
+  nav,
+  .nav-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100vw !important;
+    width: 100vw !important;
+  }
+  .nav-container {
+    gap: 0 !important;
+  }
+}
+@media (max-width: 768px) {
   .hamburger {
     display: block;
     padding-right: 20px;
@@ -375,6 +387,7 @@ html {
     object-fit: cover; 
     z-index: -1; 
 }
+
 .back-img
 {
    

@@ -126,6 +126,19 @@ body{
  display: none;
   }
 
+  @media (max-width: 768px) {
+  nav,
+  .nav-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100vw !important;
+    width: 100vw !important;
+  }
+  .nav-container {
+    gap: 0 !important;
+  }
+}
+
 @media (max-width: 768px) {
   .hamburger {
     display: block !important;

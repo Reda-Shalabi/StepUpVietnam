@@ -9,3 +9,16 @@ fetch('products.json')
         localStorage.setItem('cart', JSON.stringify(cartItems));
         alert('تمت الإضافة إلى السلة');
       }
+
+      function toggleMenu() {
+  const navList = document.querySelector('.list-nav ul');
+  const overlay = document.getElementById('menu-overlay');
+  navList.classList.toggle('active');
+  if (navList.classList.contains('active')) {
+    overlay.classList.add('active');
+    overlay.style.display = 'block';
+  } else {
+    overlay.classList.remove('active');
+    overlay.style.display = 'none';
+  }
+}

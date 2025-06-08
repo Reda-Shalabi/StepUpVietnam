@@ -12,7 +12,6 @@ function addToCart(productName, productPrice, productImage) {
       image: productImage
     });
   }
-  
 
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartCount();
@@ -131,3 +130,15 @@ colorDots.forEach(dot => {
   });
 });
 
+  function toggleMenu() {
+  const navList = document.querySelector('.list-nav ul');
+  const overlay = document.getElementById('menu-overlay');
+  navList.classList.toggle('active');
+  if (navList.classList.contains('active')) {
+    overlay.classList.add('active');
+    overlay.style.display = 'block';
+  } else {
+    overlay.classList.remove('active');
+    overlay.style.display = 'none';
+  }
+}

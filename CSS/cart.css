@@ -112,13 +112,117 @@
     background-color: #555;
 }
 
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    padding-right: 20px;
+    font-size: 28px;
+    color: #000000;
+    cursor: pointer;
+    margin-left: 10px;
+    z-index: 1001;
+  }
+  .logo {
+  width: 60px;
+
+}
+
+.logo img {
+  width: 60px;  
+                                     
+} 
+@media (max-width: 768px) {
+  .close-menu {
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-size: 28px;
+    color: #fff;
+    padding: 0;
+    user-select: none;
+    background: none;
+    border: none;
+    z-index: 1300;
+  }
+  .close-menu span {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000000;
+    transition: color 0.2s;
+  }
+  .close-menu span:hover {
+    color: #1f7ae2;
+  }
+}
+@media (max-width: 768px) {
+  #menu-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.4);
+    z-index: 1199;
+    display: none;
+  }
+  #menu-overlay.active {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .list-nav ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 90vh;
+    background: #ffffff;
+    width: 30vw;           /* ← صغر العرض هنا (مثلاً 50% من الشاشة) */
+    max-width: 160px;      /* ← حد أقصى للعرض */
+    min-width: 60px;      /* ← حد أدنى للعرض */
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    padding: 60px 10px 20px 10px;
+    z-index: 1200;
+    border-radius: 0 0 0 16px;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+  }
+  .list-nav ul.active {
+    transform: translateX(0);
+  }
+  .list-nav li {
+    margin: 12px 0;
+    text-align: right;
+  }
+  .list-nav a, .list-nav button {
+    font-size: 14px;      /* ← صغر حجم الخط */
+    padding: 6px 10px;    /* ← صغر البادينج */
+  }
+
+}
+}
+
+.login-button, .cart-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+  color: #000000;
+  background: none;
+  border: none;
+  padding: 0 10px;
+}
+
         
-        hr {
-            border: 0;
-            height: 1px;
-            background-color: var(--nike-light-gray);
-            margin: 0;
-        }
+            hr {
+                border: 0;
+                height: 1px;
+                background-color: var(--nike-light-gray);
+                margin: 0;
+            }
 
 .container {
     max-width: 1200px;

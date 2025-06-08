@@ -41,12 +41,12 @@ nav {
 }
 
 .logo {
-  width: 30%;
+  width: 70px;
 
 }
 
 .logo img {
-  width: 30%;  
+  width: 70px;  
                                      
 } 
 
@@ -116,6 +116,121 @@ nav {
 .search-container button:hover {
     background-color: #555;
 }
+
+
+.hamburger {
+  display: none;
+}
+
+  .close-menu {
+ display: none;
+  }
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    padding-right: 20px;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+    z-index: 1001;
+  }
+  .logo {
+  width: 70px;
+
+}
+
+.logo img {
+  width: 80px;  
+                                     
+} 
+@media (max-width: 768px) {
+  .close-menu {
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-size: 28px;
+    color: #fff;
+    padding: 0;
+    user-select: none;
+    background: none;
+    border: none;
+    z-index: 1300;
+  }
+  .close-menu span {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    transition: color 0.2s;
+  }
+  .close-menu span:hover {
+    color: var(--nike-yellow, #1f7ae2);
+  }
+}
+@media (max-width: 768px) {
+  #menu-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.4);
+    z-index: 1199;
+    display: none;
+  }
+  #menu-overlay.active {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .list-nav ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 90vh;
+    background: #000000;
+    width: 30vw;           /* ← صغر العرض هنا (مثلاً 50% من الشاشة) */
+    max-width: 160px;      /* ← حد أقصى للعرض */
+    min-width: 60px;      /* ← حد أدنى للعرض */
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    padding: 60px 10px 20px 10px;
+    z-index: 1200;
+    border-radius: 0 0 0 16px;
+    transform: translateX(100%);
+    transition: transform 0.3s;
+  }
+  .list-nav ul.active {
+    transform: translateX(0);
+  }
+  .list-nav li {
+    margin: 12px 0;
+    text-align: right;
+  }
+  .list-nav a, .list-nav button {
+    font-size: 14px;      /* ← صغر حجم الخط */
+    padding: 6px 10px;    /* ← صغر البادينج */
+  }
+
+}
+}
+
+.login-button, .cart-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 18px;
+  color: #000000;
+  background: none;
+  border: none;
+  padding: 0 10px;
+}
+
+
 
 
 
@@ -311,6 +426,56 @@ button {
 button:hover {
     background-color: #1459a8;
 }
+
+@media (max-width: 768px) {
+  .product-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* منتجين جنب بعض */
+    gap: 16px;
+    width: 100%;
+    padding: 0 5px;
+  }
+  .product {
+    margin: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: 10px;
+    padding: 6px 2px;
+  }
+  .product-images img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .product-details {
+    padding: 8px 2px;
+  }
+  .product-details h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  .product-details p,
+  .product-details strong {
+    font-size: 12px;
+  }
+  .price {
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 6px;
+  }
+  .buy-btn {
+    font-size: 13px;
+    padding: 7px 10px;
+    border-radius: 16px;
+  }
+  .size-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 10px;
+    margin: 2px;
+  }
+}
+
 footer {
     background-color: black;
     color: rgb(35, 130, 247);

@@ -95,6 +95,19 @@ function removeItem(index) {
     loadCart();
 }
 
+function toggleMenu() {
+  const navList = document.querySelector('.list-nav ul');
+  const overlay = document.getElementById('menu-overlay');
+  navList.classList.toggle('active');
+  if (navList.classList.contains('active')) {
+    overlay.classList.add('active');
+    overlay.style.display = 'block';
+  } else {
+    overlay.classList.remove('active');
+    overlay.style.display = 'none';
+  }
+}
+
 // دالة لحفظ المنتج للمستقبل
 function saveForLater(index) {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];

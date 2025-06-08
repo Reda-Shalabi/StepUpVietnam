@@ -3,22 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUV-Store</title>
-<link rel="stylesheet" href="CSS/styles-login.css">
+    <title>Login</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="CSS/styles-login.css ">
 </head>
 <body>
     <nav>
         <div class="nav-container">
-        
+          
             <div class="logo">
                 <img src="images/5_14_2025 4_19_38 PM.png" alt="StepUpVietnam Logo">
-            </div>
-             <div class="search-container">
+            </div>    
+            <div class="search-container">
               <input type="text" id="searchInput" placeholder="Search Product  ..." onkeyup="handleEnter(event)">
               <button onclick="searchFunction()">Search</button>
             </div>
+             <div id="menu-overlay" onclick="toggleMenu()" style="display:none;"></div>
+             <div class="hamburger" onclick="toggleMenu()">
+               <i class="fas fa-bars"></i>
+               </div>
+            
             <div class="list-nav">
                 <ul>
+                  <li class="close-menu" onclick="toggleMenu()" style="text-align:left;">
+                <span>&times;</span>
+                </li>                
                     <li><a href="index.html"><button>HOME</button></a></li>
                     <li><a href="men.html"><button>MEN</button></a></li>
                     <li><a href="women.html"><button>Women</button></a></li>
